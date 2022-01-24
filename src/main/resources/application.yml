@@ -1,0 +1,15 @@
+server:
+  port: 8648
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fpa_local
+    username: daniel
+    password: 16052002
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    url: jdbc:postgresql://localhost:5432/fpa_local
+
+app:
+  jwt:
+    secret-key: kigankigan

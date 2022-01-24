@@ -1,17 +1,19 @@
 package by.kagan.financeplanapplication.domain;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "user")
+@Table(name = "\"user\"")
 public class User {
 
     @Id
@@ -27,8 +29,9 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "birth_date")
-    private Date dateOfBirth;
+    private LocalDateTime dateOfBirth;
 
     @Column(name = "email")
     private String email;
