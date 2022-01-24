@@ -7,6 +7,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -22,7 +23,7 @@ public class CreateUserRequest {
     private String lastName;
 
     @NotEmpty
-    private LocalDate dateOfBirth;
+    private LocalDateTime dateOfBirth;
 
     @NotEmpty
     @Email
